@@ -1,11 +1,12 @@
 import React from 'react';
-import { Text, View } from 'react-native';
+import { Text, View, Image } from 'react-native';
 
 const header = (props) => {
 
 	return (
 		<View style={props.header}>
-			<Text style={props.text}>It be yours!</Text>
+			<Image style={props.image} source={require('../assets/ItsYoursInverse.png')} onClick={() => console.log('image clicked')} />
+			<Image style={props.truth} source={require('../assets/TruthBeTold.png')} onClick={() => console.log('image clicked')} />
 		</View>
 	);
 }
