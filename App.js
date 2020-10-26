@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { StyleSheet, Linking, ScrollView } from 'react-native';
+import { Alert, Linking, ScrollView } from 'react-native';
 
 import Home from './pages/Home';
 import Menu from './pages/Menu';
@@ -49,7 +49,18 @@ export default function App() {
         Linking.openURL("https://www.itsyours.org/testify/");
         break;
       case "events":
-        console.log("events page opens: nothing to link to yet");
+        alert('Nothing to link to yet')
+        // () => Alert.alert(
+        //   'Linked to the sweetest events page',
+        //   'No alerts page to link to yet',
+        //   [
+        //     {
+        //       text: 'gotcha :D',
+        //       style: 'cancel'
+        //     }
+        //   ],
+        //   { cancelable: true}
+        //   );
         break;
       case "donate":
         Linking.openURL("https://www.itsyours.org/donate/");
@@ -82,6 +93,7 @@ export default function App() {
       rendered = (
         <Home
           container={styles.container}
+          topContainer={styles.topContainer}
           link={link} button={styles.button}
           icon={styles.tinyIcon}
           location={changeLocation}

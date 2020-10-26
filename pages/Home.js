@@ -7,7 +7,7 @@ const home = (props) => {
 
 	return (
 		<View style={props.container}>
-			<View style={props.smallContainer}>
+			<View style={props.topContainer}>
 				<View style={{ flex: 1 }}>
 					<Image style={props.icon} source={require('../assets/menu icon.png')} onClick={() => props.location("menu")} />
 				</View>
@@ -33,7 +33,7 @@ const home = (props) => {
 			</ScrollView>
 			<View style={props.smallContainer}>
 				<View style={props.pill} onClick={() => props.link('record')}>
-					<Text style={color}><strong>Record it</strong></Text>
+					<Text style={color}><strong>Testify</strong></Text>
 				</View>
 			</View>
 		</View>
