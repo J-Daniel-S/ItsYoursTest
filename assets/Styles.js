@@ -77,8 +77,8 @@ export const styling = StyleSheet.create({
 		alignContent: 'center'
 	},
 	truthBeTold: {
-		height: '8vh',
-		width: '70vw',
+		height: '4vh',
+		width: '50vw',
 		color: 'white',
 		order: 1
 	}

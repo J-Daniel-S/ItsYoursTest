@@ -8,14 +8,34 @@ const home = (props) => {
 	return (
 		<View style={props.container}>
 			<View style={props.topContainer}>
-				<View style={{ flex: 1 }}>
+				{/* <View style={{ flex: 1 }}>
 					<Image style={props.icon} source={require('../assets/menu icon.png')} onClick={() => props.location("menu")} />
-				</View>
+				</View> */}
 				<View style={props.pill} onClick={() => props.link('about')}>
-					<Text style={color}><strong>Learn more about iY</strong></Text>
+					<Text style={color}><strong>About iY</strong></Text>
 				</View>
 			</View>
-			<ScrollView style={props.text}>
+			<View style={props.topContainer}>
+				<View style={props.pill} onClick={() => props.link('audio')}>
+					<Text style={color}><strong>Audio testimonies</strong></Text>
+				</View>
+			</View>
+			<View style={props.topContainer}>
+				<View style={props.pill} onClick={() => props.link('video')}>
+					<Text style={color}><strong>Video testimonies</strong></Text>
+				</View>
+			</View>
+			<View style={props.topContainer}>
+				<View style={props.pill} onClick={() => props.link('donate')}>
+					<Text style={color}><strong>Donate</strong></Text>
+				</View>
+			</View>
+			<View style={props.topContainer}>
+				<View style={props.pill} onClick={() => props.link('shop')}>
+					<Text style={color}><strong>Wear it: merch</strong></Text>
+				</View>
+			</View>
+			{/* <ScrollView style={props.text}>
 				<Text style={color}>
 					In 2016, the founder of iY had a dream of young Christians wearing a shirt labelled "it's your life." Two years later, after much prayer and thought,
 					Jason Betts was encouraged by a friend to push forward in this vision. Following the dream, iY was formed as a Public Charity nonprofit organization in August of 2018.
@@ -30,13 +50,13 @@ const home = (props) => {
 				<Text style={color}>
 					“Since we have the same spirit of faith according to what has been written, “I believe, and so I spoke,” we also believe, and so we also speak” II Corinthians 4:13
 				</Text>
-			</ScrollView>
+			</ScrollView> */}
 			<View style={props.smallContainer}>
 				<View style={props.pill} onClick={() => props.link('record')}>
 					<Text style={color}><strong>Testify</strong></Text>
 				</View>
 			</View>
-		</View>
+		</View >
 	);
 }
 
