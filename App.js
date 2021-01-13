@@ -3,6 +3,8 @@ import { Alert, Linking, ScrollView } from 'react-native';
 
 import Home from './pages/Home';
 import Menu from './pages/Menu';
+import Record from './pages/Record';
+import AudioRecorder from './components/AudioRecorder';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import { styling } from './assets/Styles';
@@ -21,6 +23,12 @@ export default function App() {
         setLocation(input);
         break;
       case "home":
+        setLocation(input);
+        break;
+      case "record":
+        setLocation(input);
+        break;
+      case "audio":
         setLocation(input);
         break;
       default:
@@ -45,7 +53,7 @@ export default function App() {
       case "video":
         Linking.openURL("https://www.itsyours.org/testimonies/#Video");
         break;
-      case "record":
+      case "upload":
         Linking.openURL("https://www.itsyours.org/testify/");
         break;
       case "events":
@@ -107,22 +115,54 @@ export default function App() {
       rendered = (
         <Menu
           container={styles.container}
-          link={link} button={styles.button}
+          link={link}
+          button={styles.button}
           icon={styles.tinyIcon}
           location={changeLocation}
           back={back}
         />
       );
       break;
+    case "record":
+      rendered = (
+        <Record
+          container={styles.container}
+          vidContainer={styles.vidContainer}
+          topContainer={styles.topContainer}
+          link={link}
+          button={styles.button}
+          icon={styles.tinyIcon}
+          location={changeLocation}
+          back={back}
+          pill={styles.pillButton}
+        />
+      );
+      break;
+    case "audio":
+      rendered = (
+        <AudioRecorder
+          container={styles.container}
+          vidContainer={styles.vidContainer}
+          topContainer={styles.topContainer}
+          link={link}
+          button={styles.button}
+          icon={styles.tinyIcon}
+          location={changeLocation}
+          back={back}
+          pill={styles.pillButton}
+        />
+      );
+      break;
     default:
       setLocation("home");
+      console.log('default reached');
       break;
   }
 
   return (
     <React.Fragment>
-      <Header header={styles.header} text={styles.text} image={styles.tinyLogo} truth={styles.truthBeTold} />
-      <ScrollView>
+      <Header header={styles.header} text={styles.text} image={styles.tinyLogo} truth={styles.truthBeTold} location={changeLocation} />
+      <ScrollView style={{ fontFamily: 'Iowan Old Style' }}>
         {rendered}
       </ScrollView>
       <Footer footer={styles.footer} icon={styles.tinyIcon} iconContainer={styles.iconContainer} link={link} />

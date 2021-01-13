@@ -4,7 +4,7 @@ export const styling = StyleSheet.create({
 	container: {
 		flex: 1,
 		margin: '5vh 0 0 0',
-		backgroundImage: 'linear-gradient(to bottom right, #404040, #787878)',
+		backgroundColor: '#404040',
 		alignContent: 'space-around',
 		justifyContent: 'flex-start',
 		height: '85vh'
@@ -25,7 +25,7 @@ export const styling = StyleSheet.create({
 		justifyContent: 'space-evenly',
 		alignItems: 'center',
 		bottom: 0,
-		position: "fixed"
+		position: "absolute"
 	},
 	iconContainer: {
 		flexDirection: 'row',
@@ -33,15 +33,17 @@ export const styling = StyleSheet.create({
 	},
 	text: {
 		color: 'white',
-		fontSize: '6vh'
+		fontSize: 6
 	},
 	button: {
 		margin: '1vh'
 	},
 	pillButton: {
 		margin: 'auto 0',
-		border: '1.5px solid white',
-		borderRadius: '500px',
+		borderStyle: 'solid',
+		borderColor: 'white',
+		borderWidth: 1.5,
+		borderRadius: 500,
 		padding: '2vh',
 		flex: 1,
 		alignItems: 'center'
@@ -54,7 +56,6 @@ export const styling = StyleSheet.create({
 		width: '12vh',
 		height: '12vh',
 		color: 'white',
-		order: 0,
 	},
 	tinyIcon: {
 		width: '7vh',
@@ -77,9 +78,9 @@ export const styling = StyleSheet.create({
 		alignContent: 'center'
 	},
 	truthBeTold: {
-		height: '4vh',
+		height: '8vh',
 		width: '50vw',
 		color: 'white',
-		order: 1
+		resizeMode: 'center'
 	}
 });
