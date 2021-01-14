@@ -3,7 +3,7 @@ import { StyleSheet } from 'react-native';
 export const styling = StyleSheet.create({
 	container: {
 		flex: 1,
-		margin: '5vh 0 0 0',
+		margin: '8vh 0 0 0',
 		backgroundColor: '#404040',
 		alignContent: 'space-around',
 		justifyContent: 'flex-start',
